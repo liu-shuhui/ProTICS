@@ -1,0 +1,10 @@
+Package: ProTICS
+Type: Package
+Title: Prognostic impact of immune cell types across subtypes
+Version: 0.1.0
+Author: Liu et al
+Maintainer: Shuhui Liu <lsh@mail.nwpu.edu.cn>
+Description: ProTICS is a pipeline with three parts. That is, i) discovering cancer subtypes; ii) inferring the cell abundance; ii) estimating the prognostic association between immune cell types and cancer subtypes.
+License: DMBL
+Encoding: UTF-8
+LazyData: true

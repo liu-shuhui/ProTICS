@@ -1,0 +1,16 @@
+Last login: Sun Apr  4 19:22:32 on ttys000
+/Users/lsh/Desktop/ProTICS/NAMESPACE ; exit;
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+lshs-MacBook-Pro:~ lsh$ /Users/lsh/Desktop/ProTICS/NAMESPACE ; exit;
+/Users/lsh/Desktop/ProTICS/NAMESPACE: line 1: syntax error near unexpected token `"^[[:alpha:]]+"'
+'Users/lsh/Desktop/ProTICS/NAMESPACE: line 1: `exportPattern("^[[:alpha:]]+")
+logout
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+[Process completed]
