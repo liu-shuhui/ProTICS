@@ -4,4 +4,4 @@ ProTICS is a pipeline consisted of three parts and the three parts have their re
 The implementation of the latter parts depends on the results of the previous parts.
 
 # How to use ProTICS
-run Demo.R
+run demo.R
