@@ -71,7 +71,7 @@ pheatmap(data,cluster_rows=T, color = colorRampPalette(c( "#0077FF","#FFEEFF","#
 
 #### Results of part 3
 ```{r data}
-Distribution of proportion for the 10 immune cell types in different molecular subtypes
+# Distribution of proportion for the 10 immune cell types in different molecular subtypes
 ggplot(data, aes(`Cell types`, y=`Relative proportions of the 10 immune cell types`, color=`Patient type`)) + 
   theme(
     panel.background = element_rect(linetype = 1, colour = "white", size = 1,fill = "lightblue"),
@@ -93,7 +93,7 @@ result<-uni_cox(covariates,data1)
 <div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113577769-599fdb80-9654-11eb-941a-8a54ab198fe2.png"/></div>
 
 ```{r data}
-#Analysis of the prognosis of the 10 immune cell type in subtypes 1 by using multivariate cox regression
+# Analysis of the prognosis of the 10 immune cell type in subtypes 1 by using multivariate cox regression
 source("./R/functions/multi_cox.R")
 result<-multi_cox(covariates,data1)
 ```
