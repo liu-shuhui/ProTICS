@@ -59,3 +59,9 @@ facet_grid(.~Cell.type, scales = "free_x")
 
 ![image](https://user-images.githubusercontent.com/80741925/113576769-bbf7dc80-9652-11eb-95ca-73ad935711d2.png)
 
+#Analysis of the prognosis of single immune cell type in subtypes 1 by using univariate cox regression
+<div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113577769-599fdb80-9654-11eb-941a-8a54ab198fe2.png"/></div>
+
+#Analysis of the prognosis of the 10 immune cell type in subtypes 1 by using multivariate cox regression
+<div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113577785-615f8000-9654-11eb-937b-4547429b8af7.png"/></div>
+
