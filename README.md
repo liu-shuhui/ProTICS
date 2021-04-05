@@ -4,7 +4,9 @@ ProTICS is a pipeline consisted of three parts and the three parts have their re
 The implementation of the latter parts depends on the results of the previous parts.
 
 ## Setup the environment
+
 ```{r data}
+# Please install the following packages
 library(data.table)
 library(dplyr)
 library(rTensor)
@@ -29,13 +31,13 @@ run Demo.R
 #### Input data 
 The data is in the ProTICS/Data folder.
 ```{r data}
-#Show gene expression data
+# read gene expression data
 data1<-fread(file = "./Data/data1.txt",header = T)
 ```
 <div align=center><img width="550" src="https://user-images.githubusercontent.com/80741925/113571091-4850d200-9648-11eb-8fcc-eb88565797d8.png"/></div>
 
 ```{r data}
-# Show DNA methylation data
+# read DNA methylation data
 data2<-fread(file = "./Data/data2.txt",header = T)
 ```
 <div align=center><img width="550" src="https://user-images.githubusercontent.com/80741925/113571112-5272d080-9648-11eb-8823-4b2ef0e70a34.png"/></div>
@@ -83,9 +85,17 @@ facet_grid(.~Cell.type, scales = "free_x")
 ```
 ![image](https://user-images.githubusercontent.com/80741925/113576769-bbf7dc80-9652-11eb-95ca-73ad935711d2.png)
 
-Analysis of the prognosis of single immune cell type in subtypes 1 by using univariate cox regression
+```{r data}
+# Analysis of the prognosis of single immune cell type in subtypes 1 by using univariate cox regression
+source("./R/functions/uni_cox.R")
+result<-uni_cox(covariates,data1)
+```
 <div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113577769-599fdb80-9654-11eb-941a-8a54ab198fe2.png"/></div>
 
-Analysis of the prognosis of the 10 immune cell type in subtypes 1 by using multivariate cox regression
+```{r data}
+#Analysis of the prognosis of the 10 immune cell type in subtypes 1 by using multivariate cox regression
+source("./R/functions/multi_cox.R")
+result<-multi_cox(covariates,data1)
+```
 <div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113577785-615f8000-9654-11eb-937b-4547429b8af7.png"/></div>
 
