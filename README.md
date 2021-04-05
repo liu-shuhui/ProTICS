@@ -24,7 +24,8 @@ data2<-fread(file = "./Data/data2.txt",header = T)
 
 Subtype= NTD_subtyping(data1,data2,k=2, n=100)
 
-#show the overall survival analysis of the two cancer subtypes
+#Visualize the overall survival analysis of the two cancer subtypes
+
 ggsurvplot(survival_out, data = survivaldata, risk.table = T,xlab="Survival time/day", ylab="Survival rate")
 <div align=left><img width="600" src="https://user-images.githubusercontent.com/80741925/113572452-d0d07200-964a-11eb-91e5-f07d19b9afbb.png"/></div>
 
