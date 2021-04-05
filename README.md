@@ -99,3 +99,6 @@ result<-multi_cox(covariates,data1)
 ```
 <div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113577785-615f8000-9654-11eb-937b-4547429b8af7.png"/></div>
 
+## How to Cite ProTICS
+
+Shuhui Liu, Yupei Zhang, Xuequn Shang* and Zhanglei Zhang*. ProTICS reveals prognostic impact of immune cell types in different molecular subtypes, 2021, Briefing in Bioinformatics, in press.
