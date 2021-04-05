@@ -4,7 +4,7 @@ ProTICS is a pipeline consisted of three parts and the three parts have their re
 The implementation of the latter parts depends on the results of the previous parts.
 
 # How to use ProTICS
-run demo.R
+run Demo.R
 
 # Input data 
 We give an example using a small dataset including 200 ptients and 2000 genes. 
