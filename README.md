@@ -13,12 +13,12 @@ The data is in the ProTICS/Data folder.
 Show gene expression data
 
 data1<-fread(file = "./Data/data1.txt",header = T)
-<div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113571091-4850d200-9648-11eb-8fcc-eb88565797d8.png"/></div>
+<div align=center><img width="550" src="https://user-images.githubusercontent.com/80741925/113571091-4850d200-9648-11eb-8fcc-eb88565797d8.png"/></div>
 
 Show DNA methylation data
 
 data2<-fread(file = "./Data/data2.txt",header = T)
-<div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113571112-5272d080-9648-11eb-8823-4b2ef0e70a34.png"/></div>
+<div align=center><img width="550" src="https://user-images.githubusercontent.com/80741925/113571112-5272d080-9648-11eb-8823-4b2ef0e70a34.png"/></div>
 
 ### Part 1
 Molecular subtypes discovery by running NTD method. Here, patients was clustered into two cancer subtypes.
