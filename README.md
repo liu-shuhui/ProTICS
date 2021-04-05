@@ -3,36 +3,36 @@
 ProTICS is a pipeline consisted of three parts and the three parts have their respective goals. 
 The implementation of the latter parts depends on the results of the previous parts.
 
-# How to use ProTICS
+## How to use ProTICS
 run Demo.R
 
 Give an example using a small dataset
-## Input data 
+### Input data 
 The data is in the ProTICS/Data folder.
 
-#Gene expression
+Show gene expression data
 
 data1<-fread(file = "./Data/data1.txt",header = T)
 <div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113571091-4850d200-9648-11eb-8fcc-eb88565797d8.png"/></div>
 
-#DNA methylation
+Show DNA methylation data
 
 data2<-fread(file = "./Data/data2.txt",header = T)
 <div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113571112-5272d080-9648-11eb-8823-4b2ef0e70a34.png"/></div>
 
-## part 1
-#run NTD method for clustering patients into two cancer subtypes.
+### Part 1
+Molecular subtypes discovery by running NTD method. Here, patients was clustered into two cancer subtypes.
 
-Subtype= NTD_subtyping(data1,data2,k=2, n=100)
+Subtype= NTD_subtyping(data1,data2,k=2, n=100) ## k=2 is an example. 
 
 Visualize the overall survival analysis of the two cancer subtypes
 
 ggsurvplot(survival_out, data = survivaldata, risk.table = T,xlab="Survival time/day", ylab="Survival rate")
 <div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113572452-d0d07200-964a-11eb-91e5-f07d19b9afbb.png"/></div>
 
-## part 2
+### Part 2
 
-Differential expression (DE) analysis of the signature genes between cancer subtypes
+Differential expression (DE) analysis of the signature genes between the two cancer subtypes
 
 GS<-subtypes_DEA(Surv,seqd)
 
@@ -45,7 +45,7 @@ pheatmap(data,cluster_rows=T, color = colorRampPalette(c( "#0077FF","#FFEEFF","#
 
 ## Part 3
 
-Distribution of proportion for the 10 immune cell types in different ccancer sybtypes
+Distribution of proportion for the 10 immune cell types in different molecular subtypes
 
 ggplot(data, aes(`Cell types`, y=`Relative proportions of the 10 immune cell types`, color=`Patient type`)) + 
   theme(
