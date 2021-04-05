@@ -44,4 +44,18 @@ pheatmap(data,cluster_rows=T, color = colorRampPalette(c( "#0077FF","#FFEEFF","#
 
 # Part 3
 
+#Distribution of proportion for the 10 immune cell types in different ccancer sybtypes
+
+ggplot(data, aes(`Cell types`, y=`Relative proportions of the 10 immune cell types`, color=`Patient type`)) + 
+  theme(
+    panel.background = element_rect(linetype = 1, colour = "white", size = 1,fill = "lightblue"),
+    axis.text.x = element_text(angle = 20, hjust = 0.6,vjust = 0.75),
+    plot.title = element_text(colour = "black",face = "bold",size = 12, vjust = 1), 
+    plot.margin = unit(c(0.2, 0.2, 0.2, 0.2), "inches")
+  )+
+  stat_boxplot(geom ='errorbar', width = 0.8) +
+  geom_boxplot(width = 0.8)
+facet_grid(.~Cell.type, scales = "free_x")
+
+![image](https://user-images.githubusercontent.com/80741925/113576769-bbf7dc80-9652-11eb-95ca-73ad935711d2.png)
 
