@@ -17,7 +17,7 @@ data1<-fread(file = "./Data/data1.txt",header = T)
 #DNA methylation
 
 data2<-fread(file = "./Data/data2.txt",header = T)
-<div align=centre><img width="500" src="https://user-images.githubusercontent.com/80741925/113571112-5272d080-9648-11eb-8823-4b2ef0e70a34.png"/></div>
+<div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113571112-5272d080-9648-11eb-8823-4b2ef0e70a34.png"/></div>
 
 # part 1
 #run NTD method for clustering patients into two cancer subtypes.
@@ -30,6 +30,17 @@ ggsurvplot(survival_out, data = survivaldata, risk.table = T,xlab="Survival time
 <div align=center><img width="500" src="https://user-images.githubusercontent.com/80741925/113572452-d0d07200-964a-11eb-91e5-f07d19b9afbb.png"/></div>
 
 # part 2
+
+#Differential expression (DE) analysis of the signature genes between cancer subtypes
+
+GS<-subtypes_DEA(Surv,seqd)
+
+#Visualize the heatmaps of the selected DE genes 
+
+pheatmap(data,cluster_rows=T, color = colorRampPalette(c( "#0077FF","#FFEEFF","#FF7700"))(1000),
+         cluster_cols=F,show_rownames = TRUE,show_colnames=F, annotation=anno_c,annotation_legend=TRUE,main="dataset")
+
+![Uploading image.png…]()
 
 # Part 3
 
