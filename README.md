@@ -40,7 +40,7 @@ GS<-subtypes_DEA(Surv,seqd)
 pheatmap(data,cluster_rows=T, color = colorRampPalette(c( "#0077FF","#FFEEFF","#FF7700"))(1000),
          cluster_cols=F,show_rownames = TRUE,show_colnames=F, annotation=anno_c,annotation_legend=TRUE,main="dataset")
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/80741925/113573101-09bd1680-964c-11eb-989e-fc04d041c47b.png)
 
 # Part 3
 
